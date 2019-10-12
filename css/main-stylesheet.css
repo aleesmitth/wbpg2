@@ -1,0 +1,102 @@
+body{
+    background-color: #330624;
+}
+.logo-container{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+#logo{
+    display: block;
+    margin: auto;
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+}
+.menu-list-container{
+    width: 100%;
+    height: fit-content;
+}
+.menu-list-container .menu-list, .a{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+.menu-list .menu-item{
+    flex: 1;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    display: table;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 100%;
+    border-bottom: 1px solid #9EF63B;
+    border-top: 1px solid #9EF63B;
+    text-align: center;
+    background: transparent;
+}
+.menu-list .menu-item a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+}
+.menu-list .menu-item a:hover{
+    opacity: .8;
+}
+.menu-list .item-with-section a:focus + .menu-item-active{
+    width: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: width .4s ease-in-out, opacity .3s;
+}
+.menu-list .menu-item a .list-item{
+    display: table-cell;
+    margin: auto;
+    vertical-align: center;
+}
+.item-with-dropdown:hover .dropdown-content{
+    display: flex;
+}
+.down {
+    border: solid #b71682;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.dropdown-content{
+    display: none;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-list{
+    margin: 0;
+    padding: 3px 0 0;
+    height: fit-content;
+    width: 100%;
+    list-style-type: none;
+}
+.dropdown-list li{
+    border-top: 1px solid rgba(153, 18, 108, 0.51);;
+    text-align: left;
+    padding: .5rem 1rem;
+}
+.menu-item-active{
+    width: 0;
+    opacity: 0;
+    background-color: limegreen;
+    transition: width .5s, opacity 2s, background-color .5s;
+    margin: 2px auto auto;
+    height: 3px;
+}
+.menu-list .item-with-section a:focus + .middle-item-active{
+    transition: width .5s, background-color 1s ease-out;
+    background-color: magenta;
+    width: 70%;
+    visibility: visible;
+    opacity: 1;
+}
